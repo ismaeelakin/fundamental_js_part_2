@@ -77,30 +77,61 @@ console.log (age1, age2);
 
 
 //Coding Challenge
-const calcAverage = (a, b, c) => (a + b + c) / 3;
-console.log (calcAverage(3, 4, 5));
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
+// console.log (calcAverage(3, 4, 5));
 
 
-//Test 1
-let scoreDolphins = calcAverage (44, 23, 71);
-let scoreKoalas = calcAverage (65, 54, 49);
-console.log (scoreDolphins, scoreKoalas);
-const checkWinner = function (avgDolphins, avgKoalas) {
-  if (avgDolphins >= 2 * avgKoalas) {
-    console.log (`Dolphins win 🏆 (${avgDolphins} vs (${avgKoalas}))`);
-  } else if (avgKoalas >= 2 * avgDolphins ) {
-    console.log (`Koalas wins 🏆(${avgKoalas} vs (${avgDolphins}))`);
+// //Test 1
+// let scoreDolphins = calcAverage (44, 23, 71);
+// let scoreKoalas = calcAverage (65, 54, 49);
+// console.log (scoreDolphins, scoreKoalas);
+// const checkWinner = function (avgDolphins, avgKoalas) {
+//   if (avgDolphins >= 2 * avgKoalas) {
+//     console.log (`Dolphins win 🏆 (${avgDolphins} vs (${avgKoalas}))`);
+//   } else if (avgKoalas >= 2 * avgDolphins ) {
+//     console.log (`Koalas wins 🏆(${avgKoalas} vs (${avgDolphins}))`);
 
-  } else {
-    console.log (`No team wins....`);
-  }
+//   } else {
+//     console.log (`No team wins....`);
+//   }
+// }
+// checkWinner (scoreDolphins, scoreKoalas);
+// checkWinner (576, 111);
+
+
+// // Test 2
+//  scoreDolphins = calcAverage (85, 54, 21);
+//  scoreKoalas = calcAverage  (23, 34, 27);
+// console.log (scoreDolphins, scoreKoalas);
+// checkWinner (scoreDolphins, scoreKoalas);
+
+
+// Storing and replacing data in Arrays
+const friend1 = 'Micheal';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+const friends = ['Micheal', 'Steven', 'Peter'];
+console.log (friends);
+const y = new Array (1991, 1984, 2008, 2020);
+console.log (friends [0]);
+console.log (friends [2]);
+console.log (friends.length);
+console.log (friends [friends.length - 1]);
+ friends [2] = 'jay';
+ console.log (friends);
+
+
+ const firstName = 'Jonas';
+ const Jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+ console.log (Jonas);
+ console.lg (Jonas.length);
+  
+ //Excercise
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
 }
-checkWinner (scoreDolphins, scoreKoalas);
-checkWinner (576, 111);
 
-
-// Test 2
- scoreDolphins = calcAverage (85, 54, 21);
- scoreKoalas = calcAverage  (23, 34, 27);
-console.log (scoreDolphins, scoreKoalas);
-checkWinner (scoreDolphins, scoreKoalas);
+const years = [1990, 1967, 2002, 2010, 2018];
+console.log (calcAge(years));
