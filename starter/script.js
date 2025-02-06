@@ -64,13 +64,36 @@ console.log (age1, age2);
 
 // Calling function inside function : Data flow
 
-const cutPieces = function (fruit) {
-  return fruit *4;
-};
-const fruitProcessor = function (apples, oranges) {
-  const applePieces = cutPieces (apples);
-  const orangePieces = cutPieces (oranges);
+// const cutPieces = function (fruit) {
+//   return fruit *4;
+// };
+// const fruitProcessor = function (apples, oranges) {
+//   const applePieces = cutPieces (apples);
+//   const orangePieces = cutPieces (oranges);
 
-  const juice = `juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`
-  return juice;
+//   const juice = `juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`
+//   return juice;
+// }
+
+
+//Coding Challenge
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+console.log (calcAverage(3, 4, 5));
+
+
+//Test 1
+const scoreDolphins = calcAverage (44, 23, 71);
+const scoreKoalas = calcAverage (65, 54, 49);
+console.log (scoreDolphins, scoreKoalas);
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log (`Dolphins win 🏆 (${avgDolphins} vs (${avgKoalas}))`);
+  } else if (avgKoalas >= 2 * avgDolphins ) {
+    console.log (`Koalas wins 🏆(${avgKoalas} vs (${avgDolphins}))`);
+
+  } else {
+    console.log (`No team wins....`);
+  }
 }
+checkWinner (scoreDolphins, scoreKoalas);
+checkWinner (576, 111);
