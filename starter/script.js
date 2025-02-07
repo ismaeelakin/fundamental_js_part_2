@@ -175,12 +175,41 @@ console.log(ages);
 // if (friends.includes('Steven')) {
 //   console.log('You have a friend called Steven');
 // }
-const calTip = function (bill){
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill *0.2;
+// const calTip = function (bill){
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill *0.2;
+// }
+// const bills = [125, 555, 44];
+
+// const tips = [calTip (bills [0]), calTip (bills[1]), calTip (bills [2])];
+// const totals = [bills [0] + tips [0], + bills[1] + tips [1], + bills [2] + tips [2]];
+
+// console.log (bills, tips, totals);
+
+
+
+
+// dot and bracket notation
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+age: 2037 - 1991,
+job: 'teacher',
+friends: ['Micheal', 'Peter', 'Steven']
+};
+console.log(jonas);
+console.log (janas.lastName);
+console.log(jonas['lastName']);
+const nameKey = 'Name';
+console.log(jonas[first + nameKey]);
+console.log(jonas[last + nameKey]);
+
+// console.log(jonas.'last' + nameKey)
+
+const interestedin = prompt ('what do you want to know about jonas ? chose between firstName, lastName, age, job, and friends');
+if (jonas[interestedin])
+{
+  console.log (jonas[interestedin]);
+}  else {
+    console.log ('Wrong request !  chose between firstName, lastName, age, job, and friends')
+  }
 }
-const bills = [125, 555, 44];
-
-const tips = [calTip (bills [0]), calTip (bills[1]), calTip (bills [2])];
-const totals = [bills [0] + tips [0], + bills[1] + tips [1], + bills [2] + tips [2]];
-
-console.log (bills, tips, totals);
