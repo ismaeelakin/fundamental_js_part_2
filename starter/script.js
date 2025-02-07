@@ -146,32 +146,41 @@ console.log(ages);
 
 //Basic Array Operations
 
-const friends = ['Micheal, Steven, Peter'];
+// const friends = ['Micheal, Steven, Peter'];
 
-// Add Element
-const newLength = friends.push('jay');
-console.log(friends);
-console.log(newLength);
-friends.unshift('john');
-console.log(friends);
-// Remove element
-friends.pop(); //Last
-const popped = friends.pop();
-console.log (popped);
-console.log (friends);
+// // Add Element
+// const newLength = friends.push('jay');
+// console.log(friends);
+// console.log(newLength);
+// friends.unshift('john');
+// console.log(friends);
+// // Remove element
+// friends.pop(); //Last
+// const popped = friends.pop();
+// console.log (popped);
+// console.log (friends);
 
-friends.shift(); // First
-console.log(friends);
+// friends.shift(); // First
+// console.log(friends);
 
 
-console.log(friends.indexOf('Steven'));
-console.log(friends.indexOf('Bob'));
+// console.log(friends.indexOf('Steven'));
+// console.log(friends.indexOf('Bob'));
 
-friends.push(23);
-console.log(friends.includes('Steven'
-));
-console.log(friends.includes('Bob'));
-console.log(friends.includes(23));
-if (friends.includes('Steven')) {
-  console.log('You have a friend called Steven');
+// friends.push(23);
+// console.log(friends.includes('Steven'
+// ));
+// console.log(friends.includes('Bob'));
+// console.log(friends.includes(23));
+// if (friends.includes('Steven')) {
+//   console.log('You have a friend called Steven');
+// }
+const calTip = function (bill){
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill *0.2;
 }
+const bills = [125, 555, 44];
+
+const tips = [calTip (bills [0]), calTip (bills[1]), calTip (bills [2])];
+const totals = [bills [0] + tips [0], + bills[1] + tips [1], + bills [2] + tips [2]];
+
+console.log (bills, tips, totals);
