@@ -197,7 +197,7 @@ job: 'teacher',
 friends: ['Micheal', 'Peter', 'Steven']
 };
 console.log(jonas);
-console.log (janas.lastName);
+console.log (jonas.lastName);
 console.log(jonas['lastName']);
 const nameKey = 'Name';
 console.log(jonas[first + nameKey]);
@@ -213,3 +213,13 @@ if (jonas[interestedin])
     console.log ('Wrong request !  chose between firstName, lastName, age, job, and friends')
   }
 }
+
+jonas.location = 'portugal';
+jonas['twitter'] = '@jonasSchmedtmann';
+console.log(jonas);
+
+
+//challenge 
+// "Jonas has 3 friends and his best friend is called Micheal"
+
+
