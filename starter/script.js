@@ -219,14 +219,14 @@ console.log(ages);
 // console.log(jonas);
 
 
-// //challenge 
-// // "Jonas has 3 friends and his best friend is called Micheal"
+// // //challenge 
+// // // "Jonas has 3 friends and his best friend is called Micheal"
 
 
-// // for loops keep running while condition is TRUE
-// for (let rep = 1; rep <=10; rep ++) {
-//   console.log(`lifting weights repition ${rep} 🤸`)
-}
+// // // for loops keep running while condition is TRUE
+// // for (let rep = 1; rep <=10; rep ++) {
+// //   console.log(`lifting weights repition ${rep} 🤸`)
+// }
 
 
 const jonas = [
@@ -240,14 +240,16 @@ const jonas = [
 
 const types = [];
 
-for (let i = 0; i < jonas.length; i++) {
+for (let i = 0; i< jonas.length; i++) {
   //Reading from the jonas Array
   console.log(jonas [i], typeof jonas [i]);
+
+  types.push (typeof jonas[i]);
 
 }
 
 
-types.push (typeof jonas[i]);
+
 console.log(types);
 const years = [1991, 2007, 1969, 2020];
 const age = [];
@@ -255,3 +257,18 @@ for (let i = 0; i < years.length; i++){
   age.push(2037 - years[i]);
 }
 console.log(age);
+
+
+//continue and break
+console.log('---ONLY STRINGS---')
+for (let i = 0; i < jonas.length; i++){
+if(typeof jonas [i]  !== 'string') continue;
+
+console.log(jonas [i], typeof jonas [i]);
+}
+console.log('---Break Number---')
+for (let i = 0; i < jonas.length; i++){
+  if(typeof jonas [i]  === 'number') break;
+  
+  console.log(jonas [i], typeof jonas [i]);
+  }
