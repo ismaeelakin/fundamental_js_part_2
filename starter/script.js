@@ -229,46 +229,68 @@ console.log(ages);
 // }
 
 
+// const jonas = [
+//    'Jonas',
+//   'Schmedtmann',
+// 2037 - 1991,
+//  'teacher',
+//  ['Micheal', 'Peter', 'Steven'],
+//  true
+// ];
+
+// const types = [];
+
+// for (let i = 0; i< jonas.length; i++) {
+//   //Reading from the jonas Array
+//   console.log(jonas [i], typeof jonas [i]);
+
+//   types.push (typeof jonas[i]);
+
+// }
+
+
+
+// console.log(types);
+// const years = [1991, 2007, 1969, 2020];
+// const age = [];
+// for (let i = 0; i < years.length; i++){
+//   age.push(2037 - years[i]);
+// }
+// console.log(age);
+
+
+// //continue and break
+// console.log('---ONLY STRINGS---')
+// for (let i = 0; i < jonas.length; i++){
+// if(typeof jonas [i]  !== 'string') continue;
+
+// console.log(jonas [i], typeof jonas [i]);
+// }
+// console.log('---Break Number---')
+// for (let i = 0; i < jonas.length; i++){
+//   if(typeof jonas [i]  === 'number') break;
+  
+//   console.log(jonas [i], typeof jonas [i]);
+//   }
+
 const jonas = [
-   'Jonas',
-  'Schmedtmann',
+  'Jonas',
+ 'Schmedtmann',
 2037 - 1991,
- 'teacher',
- ['Micheal', 'Peter', 'Steven'],
- true
+'teacher',
+['Micheal', 'Peter', 'Steven'],
+true
 ];
 
-const types = [];
-
-for (let i = 0; i< jonas.length; i++) {
-  //Reading from the jonas Array
-  console.log(jonas [i], typeof jonas [i]);
-
-  types.push (typeof jonas[i]);
-
+for (let i = jonas.length - 1; i >= 0; i = i--){
+  console.log(i, jonas[i]);
 }
 
+//Loops in Loops
+for (let excercise =  1; excercise < 4; excercise++){
+console.log(`------- Starting excercise ${excercise} `);
 
-
-console.log(types);
-const years = [1991, 2007, 1969, 2020];
-const age = [];
-for (let i = 0; i < years.length; i++){
-  age.push(2037 - years[i]);
+for (let rep =1; rep <6; rep++){
+  console.log(`Lifting weight repitition ${rep} 🤸`);
 }
-console.log(age);
-
-
-//continue and break
-console.log('---ONLY STRINGS---')
-for (let i = 0; i < jonas.length; i++){
-if(typeof jonas [i]  !== 'string') continue;
-
-console.log(jonas [i], typeof jonas [i]);
 }
-console.log('---Break Number---')
-for (let i = 0; i < jonas.length; i++){
-  if(typeof jonas [i]  === 'number') break;
-  
-  console.log(jonas [i], typeof jonas [i]);
-  }
