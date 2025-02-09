@@ -188,38 +188,42 @@ console.log(ages);
 
 
 
-// dot and bracket notation
-const jonas = {
-  firstName: 'Jonas',
-  lastName: 'Schmedtmann',
-age: 2037 - 1991,
-job: 'teacher',
-friends: ['Micheal', 'Peter', 'Steven']
-};
-console.log(jonas);
-console.log (jonas.lastName);
-console.log(jonas['lastName']);
-const nameKey = 'Name';
-console.log(jonas[first + nameKey]);
-console.log(jonas[last + nameKey]);
+// // dot and bracket notation
+// const jonas = {
+//   firstName: 'Jonas',
+//   lastName: 'Schmedtmann',
+// age: 2037 - 1991,
+// job: 'teacher',
+// friends: ['Micheal', 'Peter', 'Steven']
+// };
+// console.log(jonas);
+// console.log (jonas.lastName);
+// console.log(jonas['lastName']);
+// const nameKey = 'Name';
+// console.log(jonas[first + nameKey]);
+// console.log(jonas[last + nameKey]);
 
-// console.log(jonas.'last' + nameKey)
+// // console.log(jonas.'last' + nameKey)
 
-const interestedin = prompt ('what do you want to know about jonas ? chose between firstName, lastName, age, job, and friends');
-if (jonas[interestedin])
-{
-  console.log (jonas[interestedin]);
-}  else {
-    console.log ('Wrong request !  chose between firstName, lastName, age, job, and friends')
-  }
+// const interestedin = prompt ('what do you want to know about jonas ? chose between firstName, lastName, age, job, and friends');
+// if (jonas[interestedin])
+// {
+//   console.log (jonas[interestedin]);
+// }  else {
+//     console.log ('Wrong request !  chose between firstName, lastName, age, job, and friends')
+//   }
+// }
+
+// jonas.location = 'portugal';
+// jonas['twitter'] = '@jonasSchmedtmann';
+// console.log(jonas);
+
+
+// //challenge 
+// // "Jonas has 3 friends and his best friend is called Micheal"
+
+
+// for loops keep running while condition is TRUE
+for (let rep = 1; rep <=10; rep ++) {
+  console.log(`lifting weights repition ${rep} 🤸`)
 }
-
-jonas.location = 'portugal';
-jonas['twitter'] = '@jonasSchmedtmann';
-console.log(jonas);
-
-
-//challenge 
-// "Jonas has 3 friends and his best friend is called Micheal"
-
-
