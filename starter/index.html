@@ -1,1 +1,72 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Trace an integer loop with your own start, end and step. Inspect exact running totals without executing arbitrary code."><title>Loop Trace | JavaScript practice</title><link rel="stylesheet" href="practice.css"><script type="module" src="practice.js"></script></head><body><main><header>JavaScript practice / functions and loops</header><h1>See each iteration.</h1><p>Choose a start, inclusive end and step. Trace the counter and running total, then inspect where the loop stops.</p><form novalidate><label for="start">Start</label><input id="start" type="number" step="1" value="0" required><label for="end">Inclusive end</label><input id="end" type="number" step="1" value="10" required><label for="step">Step</label><input id="step" type="number" step="1" value="2" required><button>Trace loop</button></form><p id="status" role="status" aria-live="polite"></p><pre id="condition" aria-label="Loop condition"></pre><div class="table-wrap"><table><thead><tr><th>Iteration</th><th>Counter</th><th>Running total</th></tr></thead><tbody id="rows"></tbody></table></div><p id="summary"></p><button id="download" hidden>Download full trace</button><footer>At most 1,000 iterations; the table shows the first 100. Totals use BigInt.<br>This tool traces a fixed integer loop. It does not execute pasted JavaScript.<br><a href="https://github.com/ismaeelakin/fundamental_js_part_2">Source, tests and learning notes</a></footer></main></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Trace an integer loop with your own start, end and step. Inspect exact running totals without executing arbitrary code."
+    />
+    <title>Loop Trace | JavaScript practice</title>
+    <link rel="stylesheet" href="practice.css" />
+    <script type="module" src="practice.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>JavaScript practice / functions and loops</header>
+      <h1>See each iteration.</h1>
+      <p>
+        Choose a start, inclusive end and step. Trace the counter and running
+        total, then inspect where the loop stops.
+      </p>
+      <form novalidate>
+        <label for="start"
+          >Start<input
+            id="start"
+            type="number"
+            step="1"
+            value="0"
+            required /></label
+        ><label for="end"
+          >Inclusive end<input
+            id="end"
+            type="number"
+            step="1"
+            value="10"
+            required /></label
+        ><label for="step"
+          >Step<input
+            id="step"
+            type="number"
+            step="1"
+            value="2"
+            required /></label
+        ><button>Trace loop</button>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+      <pre id="condition" aria-label="Loop condition"></pre>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Iteration</th>
+              <th>Counter</th>
+              <th>Running total</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <p id="summary"></p>
+      <button id="download" hidden>Download full trace</button>
+      <footer>
+        At most 1,000 iterations; the table shows the first 100. Totals use
+        BigInt.<br />This tool traces a fixed integer loop. It does not execute
+        pasted JavaScript.<br /><a
+          href="https://github.com/ismaeelakin/fundamental_js_part_2"
+          >Source, tests and learning notes</a
+        >
+      </footer>
+    </main>
+  </body>
+</html>

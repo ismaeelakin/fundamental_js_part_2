@@ -4,7 +4,7 @@ A JavaScript learning tool that shows each iteration of an integer loop. Enter y
 
 [Open Loop Trace](https://ismaeelakin.github.io/fundamental_js_part_2/)
 
-![Loop Trace with an ascending sequence](docs/loop-trace.png)
+![Loop Trace with an ascending sequence](docs/loop-identity.png)
 
 ## Features
 
@@ -28,13 +28,7 @@ Open <http://127.0.0.1:8093/starter/>. A static server is needed for ES modules.
 
 ## Architecture
 
-```mermaid
-flowchart LR
-  Form[Start, end and step] --> Validate[Validate safe integers and direction]
-  Validate --> Model[loop.mjs: bounded BigInt trace]
-  Model --> Table[First 100 iterations]
-  Model --> Download[Full trace as JSON]
-```
+![Architecture](docs/architecture-identity.svg)
 
 `loop.mjs` contains the pure trace function. `practice.js` handles events, text rendering and file download. The app traces a fixed loop contract; it never evaluates pasted JavaScript. Truncation clears neither the recorded iterations nor the distinction between a completed and incomplete trace.
 
