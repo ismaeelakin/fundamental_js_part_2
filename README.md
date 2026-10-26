@@ -4,7 +4,7 @@ A JavaScript learning tool that shows each iteration of an integer loop. Enter y
 
 [Open Loop Trace](https://ismaeelakin.github.io/fundamental_js_part_2/)
 
-![Loop Trace with an ascending sequence](docs/exercise.png)
+![Loop Trace with an ascending sequence](docs/loop-trace.png)
 
 ## Features
 
