@@ -68,3 +68,36 @@ footer {
   outline: 3px solid #a85a2a;
   outline-offset: 3px;
 }
+
+input {
+  font: inherit;
+  padding: 12px;
+  border: 1px solid #7c8b94;
+  width: 100%;
+}
+.table-wrap {
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+th,
+td {
+  padding: 10px 14px;
+  text-align: right;
+  border-bottom: 1px solid #c7cfd3;
+  font:
+    14px/1.5 Consolas,
+    monospace;
+}
+th {
+  background: #e2e8eb;
+}
+footer {
+  margin-top: 30px;
+}
+[hidden] {
+  display: none !important;
+}

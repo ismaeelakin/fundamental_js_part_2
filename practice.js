@@ -1,44 +1,53 @@
+import { traceLoop } from "./loop.mjs";
 const form = document.querySelector("form");
+const status = document.querySelector("#status");
+const rows = document.querySelector("#rows");
+const download = document.querySelector("#download");
+let current = null;
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const raw = document.querySelector("#values").value.trim();
-  const tokens = raw.split(/[\s,]+/).filter(Boolean);
-  const numbers = tokens.map(Number);
-  const status = document.querySelector("#status");
-  const result = document.querySelector("#result");
-  if (
-    !tokens.length ||
-    tokens.length > 1000 ||
-    numbers.some((value) => !Number.isFinite(value))
-  ) {
-    status.textContent =
-      "Enter 1 to 1,000 finite numbers, separated by commas or spaces.";
-    result.textContent = "";
-    return;
-  }
-  let output;
-  switch (document.querySelector("#operation").value) {
-    case "unique":
-      output = [...new Set(numbers)];
-      break;
-    case "sort":
-      output = [...numbers].sort((a, b) => a - b);
-      break;
-    case "double":
-      output = numbers.map((value) => value * 2);
-      break;
-    default: {
-      const sum = numbers.reduce((total, value) => total + value, 0);
-      output = { count: numbers.length, sum, mean: sum / numbers.length };
+  rows.replaceChildren();
+  download.hidden = true;
+  current = null;
+  document.querySelector("#summary").textContent = "";
+  document.querySelector("#condition").textContent = "";
+  try {
+    const values = ["start", "end", "step"].map((id) => {
+      const raw = document.getElementById(id).value.trim();
+      if (!raw) throw new Error("Fill in start, end and step.");
+      return Number(raw);
+    });
+    current = traceLoop(...values);
+    document.querySelector("#condition").textContent =
+      `for (let i = ${values[0]}; i ${values[2] > 0 ? "<=" : ">="} ${values[1]}; i += ${values[2]})`;
+    for (const row of current.rows.slice(0, 100)) {
+      const tr = document.createElement("tr");
+      for (const value of [row.iteration, row.value, row.total]) {
+        const td = document.createElement("td");
+        td.textContent = String(value);
+        tr.append(td);
+      }
+      rows.append(tr);
     }
-  }
-  const numericValues = Array.isArray(output) ? output : Object.values(output);
-  if (numericValues.some((value) => !Number.isFinite(value))) {
+    status.textContent = current.completed
+      ? `Finished after ${current.rows.length} iterations.`
+      : "Stopped at the 1,000-iteration trace limit. The loop would continue.";
+    document.querySelector("#summary").textContent =
+      `Next counter: ${current.nextValue}. Showing ${Math.min(100, current.rows.length)} of ${current.rows.length} traced iterations.`;
+    download.hidden = false;
+  } catch (error) {
     status.textContent =
-      "These values overflow JavaScript arithmetic. Try smaller numbers.";
-    result.textContent = "";
-    return;
+      error instanceof Error ? error.message : "Could not trace this loop.";
   }
-  status.textContent = `Processed ${numbers.length} values.`;
-  result.textContent = JSON.stringify(output, null, 2);
+});
+download.addEventListener("click", () => {
+  if (!current) return;
+  const url = URL.createObjectURL(
+    new Blob([JSON.stringify(current, null, 2)], { type: "application/json" }),
+  );
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "loop-trace.json";
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
