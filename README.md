@@ -4,6 +4,8 @@ JavaScript learning notes with a small interactive number exercise. Enter your o
 
 ![Interactive number exercise](docs/exercise.png)
 
+[Open the live demo](https://ismaeelakin.github.io/fundamental_js_part_2/)
+
 ## Try the exercise
 
 Run `python -m http.server 8093 --bind 127.0.0.1` from this repository. Open <http://127.0.0.1:8093/starter/>.

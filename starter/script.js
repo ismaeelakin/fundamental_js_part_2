@@ -1,10 +1,8 @@
-'use strict'
+"use strict";
 
 // function logger () {
 //   console.log ('My name is jonas')
 // }
-
-
 
 // // calling/ running / invoking function
 // logger ();
@@ -16,14 +14,12 @@
 
 // }
 
-
 // const appleJuice = fruitProcessor (5, 0);
 // console.log(appleJuice);
 // const appleOrangeJuice = fruitProcessor (2, 4);
 // console.log (appleOrangeJuice);
 // const num = Number ('23');
 // //
-
 
 /*
 
@@ -75,11 +71,9 @@ console.log (age1, age2);
 //   return juice;
 // }
 
-
 //Coding Challenge
 // const calcAverage = (a, b, c) => (a + b + c) / 3;
 // console.log (calcAverage(3, 4, 5));
-
 
 // //Test 1
 // let scoreDolphins = calcAverage (44, 23, 71);
@@ -97,7 +91,6 @@ console.log (age1, age2);
 // }
 // checkWinner (scoreDolphins, scoreKoalas);
 // checkWinner (576, 111);
-
 
 // // Test 2
 //  scoreDolphins = calcAverage (85, 54, 21);
@@ -163,7 +156,6 @@ console.log(ages);
 // friends.shift(); // First
 // console.log(friends);
 
-
 // console.log(friends.indexOf('Steven'));
 // console.log(friends.indexOf('Bob'));
 
@@ -184,9 +176,6 @@ console.log(ages);
 // const totals = [bills [0] + tips [0], + bills[1] + tips [1], + bills [2] + tips [2]];
 
 // console.log (bills, tips, totals);
-
-
-
 
 // // dot and bracket notation
 // const jonas = {
@@ -218,16 +207,13 @@ console.log(ages);
 // jonas['twitter'] = '@jonasSchmedtmann';
 // console.log(jonas);
 
-
-// // //challenge 
+// // //challenge
 // // // "Jonas has 3 friends and his best friend is called Micheal"
-
 
 // // // for loops keep running while condition is TRUE
 // // for (let rep = 1; rep <=10; rep ++) {
 // //   console.log(`lifting weights repition ${rep} 🤸`)
 // }
-
 
 // const jonas = [
 //    'Jonas',
@@ -248,8 +234,6 @@ console.log(ages);
 
 // }
 
-
-
 // console.log(types);
 // const years = [1991, 2007, 1969, 2020];
 // const age = [];
@@ -257,7 +241,6 @@ console.log(ages);
 //   age.push(2037 - years[i]);
 // }
 // console.log(age);
-
 
 // //continue and break
 // console.log('---ONLY STRINGS---')
@@ -269,7 +252,7 @@ console.log(ages);
 // console.log('---Break Number---')
 // for (let i = 0; i < jonas.length; i++){
 //   if(typeof jonas [i]  === 'number') break;
-  
+
 //   console.log(jonas [i], typeof jonas [i]);
 //   }
 
@@ -295,22 +278,21 @@ console.log(ages);
 // }
 // }
 
-
 // for (let rep =1; rep <=10; rep++){
 //   console.log(`Lifting weights repitition ${rep} 🤸`);
-// } 
+// }
 
 //The while loop
 let rep = 1;
 while (rep <= 10) {
   // console.log(`Lifting weights repitition ${rep} 🤸`);
-  rep++
+  rep++;
 }
-let dice = Math.trunc(Math.random()* 6 ) + 1;
-while (dice !==6) {
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
   console.log(`You rolled a ${dice}`);
-  dice = Math.trunc(Math.random()* 6 ) + 1;
-if (dice === 6) {
-  console.log(`Loop is about to end...`);
-}
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log(`Loop is about to end...`);
+  }
 }
